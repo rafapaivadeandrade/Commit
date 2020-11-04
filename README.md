@@ -16,9 +16,10 @@ Market
 Market is a web project where the user can create an announcement on its merchandise for free and check other merchandises available from other users.
 
 </p>
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/51189721/98171771-0839c780-1ecf-11eb-9a6d-6be70f827583.gif)
-![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/51189721/98171772-096af480-1ecf-11eb-84e5-e880aa414a80.gif)
 
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/51189721/98173432-e130c500-1ed1-11eb-9054-8008c6e326cf.gif)
+</br></br></br>
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/51189721/98173637-28b75100-1ed2-11eb-9a28-39f1d6945e21.gif)
 
 </div>
 
