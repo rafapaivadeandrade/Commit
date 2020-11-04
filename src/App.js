@@ -1,26 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Footer from "./Footer";
+import Home from "./Home";
+import NewAnnounce from "./NewAnnounce";
+import Categories from "./Categories";
+import axios from "axios";
+import base from "./base";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    categories: [],
+    announces: [],
+  };
+  componentDidMount() {
+    axios
+      .get("https://market-49096.firebaseio.com/category.json")
+      .then((res) => {
+        this.setState({ categories: res.data });
+      });
+  }
+  render() {
+    return (
+      <Router>
+        <div className="App">
+          <Route
+            path="/"
+            exact
+            render={() => <Home categories={this.state.categories} />}
+          />
+          <Route
+            path="/novo-anuncio"
+            exact
+            render={() => <NewAnnounce categories={this.state.categories} />}
+          />
+          <Route
+            path="/categories"
+            render={() => <Categories categories={this.state.categories} />}
+          />
+          <Footer />
+        </div>
+      </Router>
+    );
+  }
 }
 
 export default App;
